@@ -41,6 +41,7 @@ public class PlayerMovesController : MonoBehaviour
     public IEnumerator AfterMove()
     {
         anim.SetTrigger("isMoving");
+        yield return new WaitForSeconds(0.1f);
         yield return new WaitUntil(() => transform.position.x == maxX || transform.position.x == minX);
         if (transform.position.x == maxX)
         {
