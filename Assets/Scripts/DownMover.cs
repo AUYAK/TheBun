@@ -4,9 +4,12 @@ public class DownMover : MonoBehaviour
 {
     [SerializeField] float speed = 3f;
     private Spawner spawner;
+
+    private ScoreCounter score;
     private bool spawned;
 
     private void Start() {
+        score = FindObjectOfType<ScoreCounter>();
         spawner = FindObjectOfType<Spawner>();
         speed = spawner.speed;
     }
@@ -18,8 +21,9 @@ public class DownMover : MonoBehaviour
             spawner.SpawnerWave();
             spawned = true;
         }
-        if(transform.position.y<-12)
+        if(transform.position.y<-11.83)
         {
+            score.ScoreChange();
             Destroy(this.gameObject);
         }
     }
