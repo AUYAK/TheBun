@@ -384,8 +384,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -39.99997, y: -160}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 0, y: -210.51001}
+  m_SizeDelta: {x: 86.88, y: 86.88}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &576986990
 MonoBehaviour:
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 204f07f852b96474b8ba39d5086ae3cf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2caa4259d76070e45b63646c7a77c882, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -999,7 +999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -39.99997, y: 0}
+  m_AnchoredPosition: {x: -40, y: 0}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1760820221
@@ -1197,6 +1197,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: checkRadius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
       propertyPath: targetPos.x
       value: 2.31
       objectReference: {fileID: 0}
@@ -1208,6 +1212,42 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2275117216864116704, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275117216864116704, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275117216864116704, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275117216864116705, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275117216864116705, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221078103324098226, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221078103324098226, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221078103324098226, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783201478173921336, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
 --- !u!1001 &7450078173096742209
@@ -1217,18 +1257,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7450078172304968519, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450078172348736890, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7450078172391108543, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7450078172731931558, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
       propertyPath: m_Name
       value: Walls
