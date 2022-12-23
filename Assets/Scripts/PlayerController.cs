@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public GameObject deathPage;
+
     private void FixedUpdate()
     {
         if (health > numOfHearts)
@@ -37,6 +39,10 @@ public class PlayerController : MonoBehaviour
                 hearts[i].enabled = false;
             }
 
+        }
+        if(health<=0)
+        {
+            deathPage.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
