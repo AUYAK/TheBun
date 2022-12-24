@@ -22,7 +22,7 @@ public class PlayerMovesController : MonoBehaviour
     }
 
     private void Update() {
-        canMove = Physics2D.OverlapCircle(transform.position,checkRadius,whatIsGround);
+        canMove = !PauseHandler.isPause && Physics2D.OverlapCircle(transform.position,checkRadius,whatIsGround);
         if (swipe.swipedRight == true && transform.position.x < maxX && canMove)
         {     
             targetPos = new Vector2(maxX,transform.position.y);
@@ -40,8 +40,8 @@ public class PlayerMovesController : MonoBehaviour
     }
     public IEnumerator AfterMove()
     {
-        anim.SetTrigger("isMoving");
-        yield return new WaitForSeconds(0.1f);
+        // anim.SetTrigger("isMoving");
+        // yield return new WaitForSeconds(0.05f);
         yield return new WaitUntil(() => transform.position.x == maxX || transform.position.x == minX);
         if (transform.position.x == maxX)
         {
