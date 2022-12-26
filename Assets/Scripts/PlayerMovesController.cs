@@ -19,6 +19,11 @@ public class PlayerMovesController : MonoBehaviour
 
     private void Start() {
         swipe = FindObjectOfType<SwipesController>();
+        ViewportHandler view = FindObjectOfType<ViewportHandler>();
+        Transform leftWall = GameObject.Find("Walls").transform.Find("LeftWall");
+        Transform rightWall = GameObject.Find("Walls").transform.Find("RightWall");
+         minX = leftWall.position.x + leftWall.GetComponent<BoxCollider2D>().offset.x + leftWall.GetComponent<BoxCollider2D>().size.x;
+         maxX = rightWall.position.x + rightWall.GetComponent<BoxCollider2D>().offset.x - rightWall.GetComponent<BoxCollider2D>().size.x;
     }
 
     private void Update() {
@@ -41,7 +46,7 @@ public class PlayerMovesController : MonoBehaviour
     public IEnumerator AfterMove()
     {
         // anim.SetTrigger("isMoving");
-        // yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.05f);
         yield return new WaitUntil(() => transform.position.x == maxX || transform.position.x == minX);
         if (transform.position.x == maxX)
         {

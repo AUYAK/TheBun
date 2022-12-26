@@ -559,6 +559,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -601,7 +602,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.25
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -664,6 +665,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1650239287}
   score: 0
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c05e00b8e52906418f212c4e9153c52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 10.5
+  constraint: 1
+  camera: {fileID: 519420031}
+  leftX: -1.6275
+  rightX: 6.2475
+  topY: 5.25
+  bottomY: -5.25
 --- !u!1 &539775936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1651,7 @@ GameObject:
   - component: {fileID: 1469634940}
   - component: {fileID: 1469634939}
   m_Layer: 5
-  m_Name: Resume1
+  m_Name: WatchAdd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2163,6 +2184,7 @@ RectTransform:
   - {fileID: 1946109325}
   - {fileID: 138850367}
   - {fileID: 1469634938}
+  - {fileID: 2131575973}
   m_Father: {fileID: 976926771}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2593,6 +2615,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2013121925}
   m_CullTransparentMesh: 1
+--- !u!1 &2131575972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131575973}
+  - component: {fileID: 2131575975}
+  - component: {fileID: 2131575974}
+  m_Layer: 5
+  m_Name: WatchAdd (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2131575973
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131575972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1648171420}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -252, y: -55}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0, y: 0.5}
+--- !u!114 &2131575974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131575972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 204f07f852b96474b8ba39d5086ae3cf, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2131575975
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131575972}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2275117216791182592
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2682,7 +2780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
       propertyPath: checkRadius
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
       propertyPath: targetPos.x
@@ -2741,6 +2839,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7450078172492688145, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.6275
+      objectReference: {fileID: 0}
     - target: {fileID: 7450078172731931558, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
       propertyPath: m_Name
       value: Walls
@@ -2788,6 +2890,10 @@ PrefabInstance:
     - target: {fileID: 7450078172731931560, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450078173487458380, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.5475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db3daf30ffbefb499e30616c253eab1, type: 3}
