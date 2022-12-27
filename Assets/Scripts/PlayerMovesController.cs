@@ -20,10 +20,10 @@ public class PlayerMovesController : MonoBehaviour
     private void Start() {
         swipe = FindObjectOfType<SwipesController>();
         ViewportHandler view = FindObjectOfType<ViewportHandler>();
-        Transform leftWall = GameObject.Find("Walls").transform.Find("LeftWall");
-        Transform rightWall = GameObject.Find("Walls").transform.Find("RightWall");
-         minX = leftWall.position.x + leftWall.GetComponent<BoxCollider2D>().offset.x + leftWall.GetComponent<BoxCollider2D>().size.x;
-         maxX = rightWall.position.x + rightWall.GetComponent<BoxCollider2D>().offset.x - rightWall.GetComponent<BoxCollider2D>().size.x;
+        Transform leftWall = GameObject.Find("BrickWalls").transform.Find("LeftWall");
+        Transform rightWall = GameObject.Find("BrickWalls").transform.Find("RightWall");
+         minX = leftWall.position.x + leftWall.GetComponent<BoxCollider2D>().size.x / 2 + transform.GetComponent<CircleCollider2D>().radius;
+         maxX = rightWall.position.x - rightWall.GetComponent<BoxCollider2D>().size.x / 2 - transform.GetComponent<CircleCollider2D>().radius;
     }
 
     private void Update() {

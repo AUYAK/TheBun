@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DownMover : MonoBehaviour
 {
-    [SerializeField] float speed = 3f;
+    private float speed;
     private Spawner spawner;
 
     private ScoreCounter score;
@@ -14,14 +14,14 @@ public class DownMover : MonoBehaviour
         speed = spawner.speed;
     }
     private void FixedUpdate() {
-        transform.Translate(Vector2.down*speed*Time.fixedDeltaTime);
+        transform.Translate(Vector2.down*spawner.speed*Time.fixedDeltaTime);
         speed += spawner.speedIncrease * Time.fixedDeltaTime;
         if(transform.position.y<0 && !spawned)
         {
             spawner.SpawnerWave();
             spawned = true;
         }
-        if(transform.position.y<-11.83)
+        if(transform.position.y<=-21.5)
         {
             score.ScoreChange();
             Destroy(this.gameObject);

@@ -146,16 +146,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240f64ae9cedcb644b36a1cfc41877ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRadius: 4
+  checkRadius: 8
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
   canMove: 0
-  speed: 10
+  speed: 4
   targetPos: {x: 0, y: -4}
   anim: {fileID: 0}
-  minX: -1.8
-  maxX: 1.8
+  minX: 0
+  maxX: 0
 --- !u!1 &2275117216864116703
 GameObject:
   m_ObjectHideFlags: 0
