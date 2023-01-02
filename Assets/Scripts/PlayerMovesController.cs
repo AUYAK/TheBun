@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovesController : MonoBehaviour
 {
+    public GameObject playerEffect;
+    public GameObject wallEffect;
     public float checkRadius;
     public LayerMask whatIsGround;
     public bool canMove;
@@ -29,7 +31,8 @@ public class PlayerMovesController : MonoBehaviour
     private void Update() {
         canMove = !PauseHandler.isPause && Physics2D.OverlapCircle(transform.position,checkRadius,whatIsGround);
         if (swipe.swipedRight == true && transform.position.x < maxX && canMove)
-        {     
+        {
+            Instantiate(playerEffect,transform.position, Quaternion.identity);     
             targetPos = new Vector2(maxX,transform.position.y);
             StartCoroutine(AfterMove());
 
@@ -37,6 +40,7 @@ public class PlayerMovesController : MonoBehaviour
         }
         if (swipe.swipedLeft == true && transform.position.x > minX && canMove)
         {
+            Instantiate(playerEffect,transform.position, Quaternion.identity);    
             targetPos = new Vector2(minX,transform.position.y);
             StartCoroutine(AfterMove());
 
@@ -49,11 +53,13 @@ public class PlayerMovesController : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         yield return new WaitUntil(() => transform.position.x == maxX || transform.position.x == minX);
         if (transform.position.x == maxX)
-        {
+        {   
+            Instantiate(wallEffect,transform.position + new Vector3(transform.localScale.x/2,0,0), Quaternion.identity);  
             anim.SetTrigger("right");
         }
         if (transform.position.x == minX)
         {
+            Instantiate(wallEffect,transform.position - new Vector3(transform.localScale.x/2,0,0),Quaternion.Euler(new Vector3(0,0,180)));  
             anim.SetTrigger("left");
         }
         yield return null;

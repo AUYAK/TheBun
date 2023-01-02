@@ -681,8 +681,8 @@ MonoBehaviour:
   UnitsSize: 19
   constraint: 1
   camera: {fileID: 519420031}
-  leftX: -4.3898106
-  rightX: 4.3898106
+  leftX: -4.3846154
+  rightX: 4.3846154
   topY: 9.5
   bottomY: -9.5
 --- !u!1 &539775936
@@ -922,7 +922,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2800291767282390079, guid: db316d4b4a79ef84a8b245256930e617, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.9999995
+      value: 3.9948044
       objectReference: {fileID: 0}
     - target: {fileID: 2800291767282390079, guid: db316d4b4a79ef84a8b245256930e617, type: 3}
       propertyPath: m_LocalPosition.y
@@ -934,7 +934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8367881226590047204, guid: db316d4b4a79ef84a8b245256930e617, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.9999995
+      value: -3.9948044
       objectReference: {fileID: 0}
     - target: {fileID: 8367881226590047204, guid: db316d4b4a79ef84a8b245256930e617, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2856,6 +2856,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1997775016}
     - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: wallEffect
+      value: 
+      objectReference: {fileID: 5783426114160318253, guid: 04b9a2b34baa03843a8f0ec5e973ce1b, type: 3}
+    - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
       propertyPath: targetPos.x
       value: 2.31
       objectReference: {fileID: 0}
@@ -2863,6 +2867,10 @@ PrefabInstance:
       propertyPath: targetPos.y
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: 2275117214994865575, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
+      propertyPath: playerEffect
+      value: 
+      objectReference: {fileID: 387833787825151191, guid: d823b656c95d6f447b1f15a015c8c7a8, type: 3}
     - target: {fileID: 2275117216864116704, guid: 9d98446d7ebcf864abab8397d5dcca9e, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
